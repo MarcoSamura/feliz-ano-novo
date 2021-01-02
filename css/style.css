@@ -1,0 +1,110 @@
+:root {
+	--color-background: #000000;
+	--color-font: #ecf0f1;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	box-sizing: border-box;
+}
+
+body,
+#root {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	max-width: 90vw;
+	height: 100vh;
+	font: 6rem 'Comfortaa', cursive; 
+}
+
+
+h1 {
+	letter-spacing: 40px;
+	font-weight: 500;
+	text-align: center;
+	color: var(--color-font);
+	
+}
+
+
+
+h1 #oldYear {
+	position: fixed;
+    transition: 2s ease-in-out;
+    animation: goodbye 3s infinite ease-in alternate;
+
+}
+
+h1 #newYear {
+
+	position: fixed;
+	animation: happy 3s infinite ease-out alternate;
+	top: -100%;
+	color: var(--color-font);
+}
+
+
+@keyframes goodbye {
+
+	10% {
+		top: 33%;
+		opacity: 1;
+	}
+
+	30% {
+		opacity: 0.7;
+	}
+	50% {
+		opacity: 0.6;
+	}
+	60% {
+
+		opacity: 0.3;
+	}
+	80% {
+		opacity: 0;
+	}
+	90% {
+
+		opacity: 0;
+	}
+	100% {
+		top: 100%;
+		opacity: 0;
+		display: none;
+	}
+
+}
+
+@keyframes happy {
+	10% {
+		top: -100%;
+		opacity: 0;
+	}
+
+	30% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 0;
+	}
+	60% {
+
+		opacity: 0;
+	}
+	80% {
+		opacity: .9;
+	}
+	90% {
+		opacity: 1;
+	}
+	100% {
+		top: 33%;
+		opacity: 1;
+	}
+
+}
