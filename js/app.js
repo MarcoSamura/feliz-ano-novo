@@ -12,7 +12,7 @@ const animationLetter = {
 const backgroundAnimation = {
 	initAnimated() {
 		VANTA.WAVES({
-		  el: "html",
+		  el: "body",
 		  mouseControls: true,
 		  touchControls: true,
 		  gyroControls: true,
